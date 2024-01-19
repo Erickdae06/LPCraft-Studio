@@ -19,8 +19,8 @@
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div class="container">
-          <img src="assets/brand.png" alt="Logo" height="30" />
-          <a class="navbar-brand" href="#">Online Shop</a>
+          <img src="assets/brand.png" alt="Logo" height="30" class="me-2" />
+          <a class="navbar-brand" href="#">LPC</a>
           <button
             class="navbar-toggler d-lg-none"
             type="button"
@@ -78,8 +78,12 @@
       <!-- Jumbotron -->
       <div class="p-5 mb-4 bg-light rounded-3 text-center jb-bg mt-5">
         <div class="container-fluid py-5">
-          <h1 class="display-5 fw-bold text-white">Online Shop</h1>
-          <button class="btn btn-danger btn-lg" type="button">
+          <h1 class="display-5 fw-bold text-white">LPCraft Studio</h1>
+          <button
+            class="btn btn-danger gradient btn-lg"
+            type="button"
+            onclick="callUs()"
+          >
             Hubungi Kami
           </button>
         </div>
@@ -94,7 +98,14 @@
           class="row justify-content-center align-items-center g-2 text-center"
         >
           <h2>Keunggulan kami</h2>
-          <p>(Berisi penjelasan keunggulan produk/jasa anda)</p>
+          <p>
+            LPCraft Studio adalah mitra kreatif Anda yang menyediakan layanan
+            pembuatan landing page valid AMP, undangan digital, desain grafis,
+            dan personal branding UMKM ke website. Dengan pendekatan inovatif
+            dan profesional, kami menciptakan solusi desain yang memukau dan
+            memastikan kehadiran online yang kuat untuk memenuhi kebutuhan
+            digital bisnis Anda.
+          </p>
         </div>
 
         <div class="row justify-content-center align-items-center g-2">
@@ -132,8 +143,8 @@
             />
             <h2>RESPONSIF</h2>
             <p>
-              Kami menawarkan toko online yang responsif untuk pengalaman
-              belanja yang optimal.
+              Kami menawarkan Landing page yang responsif untuk pengalaman yang
+              optimal.
             </p>
           </div>
         </div>
@@ -406,26 +417,53 @@
 
     <!-- script api whatsapp -->
     <script>
-        function openWhatsApp(cardId) {
-          var nomorTujuan = "082141353483";
-          var namaProduk = document.getElementById("card" + cardId + "-title").innerText.trim();
-          var hargaProduk = document.getElementById("card" + cardId + "-price").innerText.trim();
-          var deskripsiProduk = document.getElementById("card" + cardId + "-description").innerText.trim();
-      
-          var pesan =
-            "Saya tertarik untuk membeli produk:\n" +
-            "Nama Produk: " + namaProduk + "\n" +
-            "Harga: " + hargaProduk + "\n" +
-            "Deskripsi: " + deskripsiProduk + "\n" +
-            "Silakan beri informasi lebih lanjut.";
-      
-          var encodedMessage = encodeURIComponent(pesan);
-          var whatsappURL =
-            "https://api.whatsapp.com/send?phone=" + nomorTujuan + "&text=" + encodedMessage;
-      
-          window.open(whatsappURL);
-        }
-      </script>
-      
+      function openWhatsApp(cardId) {
+        var nomorTujuan = "082141353483";
+        var namaProduk = document
+          .getElementById("card" + cardId + "-title")
+          .innerText.trim();
+        var hargaProduk = document
+          .getElementById("card" + cardId + "-price")
+          .innerText.trim();
+        var deskripsiProduk = document
+          .getElementById("card" + cardId + "-description")
+          .innerText.trim();
+
+        var pesan =
+          "Saya tertarik untuk membeli produk:\n" +
+          "Nama Produk: " +
+          namaProduk +
+          "\n" +
+          "Harga: " +
+          hargaProduk +
+          "\n" +
+          "Deskripsi: " +
+          deskripsiProduk +
+          "\n" +
+          "Silakan beri informasi lebih lanjut.";
+
+        var encodedMessage = encodeURIComponent(pesan);
+        var whatsappURL =
+          "https://api.whatsapp.com/send?phone=" +
+          nomorTujuan +
+          "&text=" +
+          encodedMessage;
+
+        window.open(whatsappURL);
+      }
+
+      function callUs() {
+        var no = "082141353483";
+        var pesan = "Hallo, Saya ingin bertanya seputar LPCraft Studio";
+
+        var encodedMessage = encodeURIComponent(pesan);
+        var whatsappURL =
+          "https://api.whatsapp.com/send?phone=" +
+          no +
+          "&text=" +
+          encodedMessage;
+        window.open(whatsappURL);
+      }
+    </script>
   </body>
 </html>
