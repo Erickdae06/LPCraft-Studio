@@ -21,9 +21,11 @@
     <title>LPCraft Studio</title>
   </head>
 
-  <body>
+  <body class="bg-dark">
     <header>
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+      <nav
+        class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top border-bottom border-2 border-light p-3"
+      >
         <div class="container">
           <img src="assets/brand.png" alt="Logo" height="30" class="me-2" />
           <a class="navbar-brand" href="#">LPC</a>
@@ -48,45 +50,25 @@
               <li class="nav-item">
                 <a class="nav-link" href="#produk">Produk</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="dropdownId"
-                  data-bs-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  >Tentang Kami</a
-                >
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                  <a class="dropdown-item" href="#">Profil</a>
-                  <a class="dropdown-item" href="#">Kontak</a>
-                </div>
-              </li>
+              
             </ul>
-            <form class="d-flex my-2 my-lg-0">
-              <input
-                class="form-control me-sm-2"
-                type="text"
-                placeholder="Search"
-              />
-              <button
-                class="btn btn-outline-success my-2 my-sm-0"
-                type="submit"
-              >
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
 
       <!-- Jumbotron -->
-      <div class="p-5 mb-4 bg-light rounded-3 text-center jb-bg mt-5">
+      <div class="p-5 mb-4 bg-dark text-center jb-bg mt-5">
         <div class="container-fluid py-5">
+          <img
+          src="./assets/avatar.png"
+          alt="logo_brand_img"
+          class="img-fluid my-3"
+          height="200"
+          width="200"
+        />
           <h1 class="display-5 fw-bold text-white">LPCraft Studio</h1>
           <button
-            class="btn btn-danger gradient btn-lg"
+            class="btn btn-outline-light btn-lg m-5"
             type="button"
             onclick="callUs()"
           >
@@ -98,7 +80,7 @@
 
     <main>
       <!-- keunggulan kami -->
-      <div class="container">
+      <div class="container text-light">
         <div class="col"></div>
         <div
           class="row justify-content-center align-items-center g-2 text-center"
@@ -162,157 +144,156 @@
         <div class="container p-4 rounded-3">
           <h2 class="text-center my-5 text-white">Produk</h2>
           <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="card">
+            <div class="col-md-3 mb-4">
+              <div class="card bg-dark border-2 border-light p-2 rounded">
                 <img
                   src="assets/produk/google-maps.png"
                   class="card-img-top"
                   alt="Product Image"
                 />
-                <div class="card-body">
+                <div class="card-body text-light">
                   <h5 id="card1-title" class="card-title">
                     MapCraft Solutions
                   </h5>
                   <h5 id="card1-price">Rp.100,000</h5>
-                  <p id="card1-description" class="card-text">
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="toggleDescription('card1-description')"
+                  >
+                    Detail
+                  </button>
+                  <p
+                    id="card1-description"
+                    class="card-text"
+                    style="display: none"
+                  >
                     MapCraft Solutions adalah layanan yang menyediakan jasa
                     profesional untuk memasukkan lokasi bisnis dan tempat
                     penting ke dalam Google Maps
                   </p>
-                  <a href="#" class="btn btn-success" onclick="openWhatsApp(1)"
+                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(1)"
                     >Pesan Via Whatsapp</a
                   >
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4 mb-4">
-              <div class="card">
+            <div class="col-md-3 mb-4">
+              <div class="card bg-dark border-2 border-light p-2 rounded">
                 <img
                   src="assets/produk/graphic-designer.png"
                   class="card-img-top"
                   alt="Product Image"
                 />
-                <div class="card-body">
+                <div class="card-body text-light">
                   <h5 id="card2-title" class="card-title">Desain Grafis</h5>
                   <h5 id="card2-price">N/A</h5>
-                  <p id="card2-description" class="card-text">
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="toggleDescription('card2-description')"
+                  >
+                    Detail
+                  </button>
+                  <p
+                    id="card2-description"
+                    class="card-text"
+                    style="display: none"
+                  >
                     DesignCraft Studio, ahli desain grafis kreatif untuk
                     menciptakan visual yang menarik dan efektif. Dari logo yang
                     mencerminkan identitas unik hingga materi pemasaran yang
                     memikat, kami mewujudkan visi kreatif Anda dengan perpaduan
                     estetika yang kuat dan strategi pemasaran yang cerdas.
                   </p>
-                  <a href="#" class="btn btn-success" onclick="openWhatsApp(2)"
+                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(2)"
                     >Pesan Via Whatsapp</a
                   >
                 </div>
               </div>
             </div>
-            <div class="col-md-4 mb-4">
-              <div class="card">
+            <div class="col-md-3 mb-4">
+              <div class="card bg-dark border-2 border-light p-2">
                 <img
                   src="assets/produk/laptop.png"
                   class="card-img-top"
                   alt="Product Image"
                 />
-                <div class="card-body">
+                <div class="card-body text-light">
                   <h5 class="card-title">Toko Online</h5>
                   <h5>Rp.2,000,000</h5>
-                  <p class="card-text">
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="toggleDescription('card3-description')"
+                  >
+                    Detail
+                  </button>
+                  <p
+                    class="card-text"
+                    id="card3-description"
+                    style="display: none"
+                  >
                     TokoOnline Hub, solusi lengkap untuk toko online Anda.
                     Platform intuitif, desain menarik, dan sistem pembayaran
                     aman. Dapatkan pengalaman berbelanja online yang mulus
                     dengan fitur analitika penjualan dan integrasi media sosial.
                     Pilih TokoOnline Hub untuk sukses e-commerce Anda.
                   </p>
-                  <a href="#" class="btn btn-success">Pesan Via Whatsapp</a>
+                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(3)"
+                    >Pesan Via Whatsapp</a
+                  >
                 </div>
               </div>
             </div>
-            <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="card">
+            <div class="col-md-3 mb-4">
+              <div class="card bg-dark border-2 border-light p-2">
                 <img
                   src="assets/produk/invitation.png"
                   class="card-img-top"
                   alt="Product Image"
                 />
-                <div class="card-body">
+                <div class="card-body text-light">
                   <h5 class="card-title">Undangan Digital</h5>
-                  <h5>Rp.100,000 s/d Rp.300,000</h5>
-                  <p class="card-text">
-                    <div class="package">
-                      <h5>Package 1</h5>
-                      <ul>
-                        <li>💐 Harga: 100Rb</li>
-                        <li>📝 12 Nama</li>
-                        <li>🎨 1 Design</li>
-                      </ul>
-                    </div>
-                    <div class="package">
-                      <h5>Package 2</h5>
-                      <ul>
-                        <li>💐 Harga: 200Rb</li>
-                        <li>📝 24 Nama</li>
-                        <li>🎨 2 Design</li>
-                      </ul>
-                    </div>
-                    <div class="package">
-                      <h5>Package 3</h5>
-                      <ul>
-                        <li>💐 Harga: 300Rb</li>
-                        <li>📝 48 Nama</li>
-                        <li>🎨 3 Design</li>
-                      </ul>
-                    </div>
-                    
-                    
-                  </p>
-                  <a href="#" class="btn btn-success">Pesan Via Whatsapp</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card">
-                <img
-                  src="assets/produk/bukuIlmuLogika.webp"
-                  class="card-img-top"
-                  alt="Product Image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Nama Produk 2</h5>
-                  <h5>Rp.200,000</h5>
-                  <p class="card-text">Deskripsi singkat produk.</p>
-                  <a href="#" class="btn btn-success">Pesan Via Whatsapp</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card">
-                <img
-                  src="assets/produk/bungapapan.jfif"
-                  class="card-img-top"
-                  alt="Product Image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">Nama Produk 3</h5>
-                  <h5>Rp.200,000</h5>
-                  <p class="card-text">Deskripsi singkat produk.</p>
-                  <a href="#" class="btn btn-success">Pesan Via Whatsapp</a>
-                </div>
+                  <h5>Rp.100,000 ^
+                  <div class="package">
+                    <ul id="package1-description" style="display: none">
+                      <li>💐 Harga: 100Rb</li>
+                      <li>📝 12 Nama</li>
+                      <li>🎨 1 Design</li>
+                    </ul>
+                  </div>
+                  <div class="package">
+                    <ul id="package2-description" style="display: none">
+                      <li>💐 Harga: 200Rb</li>
+                      <li>📝 24 Nama</li>
+                      <li>🎨 2 Design</li>
+                    </ul>
+                  </div>
+                  <div class="package">
+                    <ul id="package3-description" style="display: none">
+                      <li>💐 Harga: 300Rb</li>
+                      <li>📝 48 Nama</li>
+                      <li>🎨 3 Design</li>
+                    </ul>
+                  </div>
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="togglePackages()"
+                  >
+                    Detail
+                  </button>
+                  <a href="#" class="btn btn-outline-light">Pesan Via Whatsapp</a>
+                  </div>
               </div>
             </div>
             <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
           </div>
+
+          <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
         </div>
       </div>
 
       <!-- Testimonial Pelanggan  -->
-      <div class="container">
+      <!-- <div class="container">
         <div
           class="row justify-content-center align-items-center g-2 text-center"
         >
@@ -363,11 +344,11 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- informasi terbaru -->
 
-      <div class="container-fluid bg-dark text-white">
+      <!-- <div class="container-fluid bg-dark text-white">
         <div class="container artikel">
           <div
             class="row justify-content-center align-items-center g-2 text-center"
@@ -426,32 +407,12 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </main>
 
-    <footer>
-      <div class="footer">
-        <div class="fluid-container bg-dark text-white p-4">
-          <div class="row text-center">
-            <div class="col-md-4">
-              <h4>Tentang Kami</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="col-md-4">
-              <h4>Hubungi Kami</h4>
-              <p>Email: info@example.com</p>
-              <p>Telepon: 123-456-7890</p>
-            </div>
-            <div class="col-md-4">
-              <h4>Ikuti Kami</h4>
-              <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Facebook</a></li>
-                <li class="list-inline-item"><a href="#">Twitter</a></li>
-                <li class="list-inline-item"><a href="#">Instagram</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <footer class="border-2 border-top border-light">
+      <div class="container p-3 text-light text-center">
+        <p>Copyright@2024.LpCraft. Alright Reserved</p>
       </div>
     </footer>
 
@@ -510,6 +471,64 @@
           "&text=" +
           encodedMessage;
         window.open(whatsappURL);
+      }
+      function toggleDescription(cardId) {
+        var description = document.getElementById(cardId);
+        var button = event.target;
+        if (description.style.display === "none") {
+          description.style.display = "block";
+          button.textContent = "Sembunyikan Detail";
+        } else {
+          description.style.display = "none";
+          button.textContent = "Detail";
+        }
+      }
+      function toggleDescription(cardId) {
+        var description = document.getElementById(cardId);
+        var button = event.target;
+        if (description.style.display === "none") {
+          description.style.display = "block";
+          button.textContent = "Sembunyikan Detail";
+        } else {
+          description.style.display = "none";
+          button.textContent = "Detail";
+        }
+      }
+      function toggleDescription(cardId) {
+        var description = document.getElementById(cardId);
+        var button = event.target;
+        if (description.style.display === "none") {
+          description.style.display = "block";
+          button.textContent = "Sembunyikan Detail";
+        } else {
+          description.style.display = "none";
+          button.textContent = "Detail";
+        }
+      }
+      function togglePackage(packageId) {
+        var description = document.getElementById(packageId);
+        var button = event.target;
+        if (description.style.display === "none") {
+          description.style.display = "block";
+          button.textContent = "Sembunyikan Detail";
+        } else {
+          description.style.display = "none";
+          button.textContent = "Detail";
+        }
+      }
+      function togglePackages() {
+        var packages = document.getElementsByClassName("package");
+        var button = event.target;
+        for (var i = 0; i < packages.length; i++) {
+          var description = packages[i].getElementsByTagName("ul")[0];
+          if (description.style.display === "none") {
+            description.style.display = "block";
+            button.textContent = "Sembunyikan Detail";
+          } else {
+            description.style.display = "none";
+            button.textContent = "Detail";
+          }
+        }
       }
     </script>
   </body>
