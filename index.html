@@ -89,7 +89,7 @@
         />
           <h1 class="display-5 fw-bold text-white">LPCraft Studio</h1>
           <button
-            class="btn btn-outline-light btn-lg mt-2"
+            class="neonButton neonShimmerButton -lg mt-2"
             type="button"
             onclick="callUs()"
           >
@@ -100,13 +100,167 @@
     </header>
 
     <main>
+
+      <!-- produk  -->
+      <div class="container-fluid bg-dark" id="produk">
+        <div class="container p-4 rounded-3">
+          <h2 class="text-center my-5 text-white">Produk</h2>
+          <div class="row">
+            <div class="col-lg-3 col-6 mb-4">
+              <div class="card bg-dark border-2 border-light p-2 rounded">
+                <img
+                  src="assets/produk/google-maps.png"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body text-light">
+                  <h5 id="card1-title" class="card-title">
+                    MapCraft Solutions
+                  </h5>
+                  <h5 id="card1-price">Rp.100,000</h5>
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="toggleDescription('card1-description')"
+                  >
+                    Detail
+                  </button>
+                  <p
+                    id="card1-description"
+                    class="card-text"
+                    style="display: none"
+                  >
+                    MapCraft Solutions adalah layanan yang menyediakan jasa
+                    profesional untuk memasukkan lokasi bisnis dan tempat
+                    penting ke dalam Google Maps
+                  </p>
+                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(1)"
+                    >Pesan Via Whatsapp</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-6 mb-4">
+              <div class="card bg-dark border-2 border-light p-2 rounded">
+                <img
+                  src="assets/produk/graphic-designer.png"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body text-light">
+                  <h5 id="card2-title" class="card-title">Desain Grafis</h5>
+                  <h5 id="card2-price">N/A</h5>
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="toggleDescription('card2-description')"
+                  >
+                    Detail
+                  </button>
+                  <p
+                    id="card2-description"
+                    class="card-text"
+                    style="display: none"
+                  >
+                    DesignCraft Studio, ahli desain grafis kreatif untuk
+                    menciptakan visual yang menarik dan efektif. Dari logo yang
+                    mencerminkan identitas unik hingga materi pemasaran yang
+                    memikat, kami mewujudkan visi kreatif Anda dengan perpaduan
+                    estetika yang kuat dan strategi pemasaran yang cerdas.
+                  </p>
+                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(2)"
+                    >Pesan Via Whatsapp</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-6 mb-4">
+              <div class="card bg-dark border-2 border-light p-2">
+                <img
+                  src="assets/produk/laptop.png"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body text-light">
+                  <h5 class="card-title">Toko Online</h5>
+                  <h5>Rp.2,000,000</h5>
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="toggleDescription('card3-description')"
+                  >
+                    Detail
+                  </button>
+                  <p
+                    class="card-text"
+                    id="card3-description"
+                    style="display: none"
+                  >
+                    TokoOnline Hub, solusi lengkap untuk toko online Anda.
+                    Platform intuitif, desain menarik, dan sistem pembayaran
+                    aman. Dapatkan pengalaman berbelanja online yang mulus
+                    dengan fitur analitika penjualan dan integrasi media sosial.
+                    Pilih TokoOnline Hub untuk sukses e-commerce Anda.
+                  </p>
+                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(3)"
+                    >Pesan Via Whatsapp</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-6 mb-4">
+              <div class="card bg-dark border-2 border-light p-2">
+                <img
+                  src="assets/produk/invitation.png"
+                  class="card-img-top"
+                  alt="Product Image"
+                />
+                <div class="card-body text-light">
+                  <h5 class="card-title">Undangan Digital</h5>
+                  <h5>Rp.100,000 ^
+                  <div class="package">
+                    <ul id="package1-description" style="display: none">
+                      <li>💐 Harga: 100Rb</li>
+                      <li>📝 12 Nama</li>
+                      <li>🎨 1 Design</li>
+                    </ul>
+                  </div>
+                  <div class="package">
+                    <ul id="package2-description" style="display: none">
+                      <li>💐 Harga: 200Rb</li>
+                      <li>📝 24 Nama</li>
+                      <li>🎨 2 Design</li>
+                    </ul>
+                  </div>
+                  <div class="package">
+                    <ul id="package3-description" style="display: none">
+                      <li>💐 Harga: 300Rb</li>
+                      <li>📝 48 Nama</li>
+                      <li>🎨 3 Design</li>
+                    </ul>
+                  </div>
+                  <button
+                    class="btn btn-outline-warning my-2"
+                    onclick="togglePackages()"
+                  >
+                    Detail
+                  </button>
+                  <a href="#" class="btn btn-outline-light">Pesan Via Whatsapp</a>
+                  </div>
+              </div>
+            </div>
+            <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
+          </div>
+
+          <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
+        </div>
+      </div>
+
       <!-- keunggulan kami -->
-      <div class="container text-light keunggulan">
+      <div class="container text-light keunggulan pt-4 mt-4">
         <div class="col"></div>
         <div
           class="row justify-content-center align-items-center g-2 text-center"
         >
-          <h2>Keunggulan kami</h2>
+          <h2>Keunggulan Kami</h2>
           <p>
             LPCraft Studio adalah mitra kreatif Anda yang menyediakan layanan
             pembuatan landing page valid AMP, undangan digital, desain grafis,
@@ -161,157 +315,7 @@
 
       <!-- produk -->
 
-      <div class="container-fluid bg-dark" id="produk">
-        <div class="container p-4 rounded-3">
-          <h2 class="text-center my-5 text-white">Produk</h2>
-          <div class="row">
-            <div class="col-md-3 col-6 mb-4">
-              <div class="card bg-dark border-2 border-light p-2 rounded">
-                <img
-                  src="assets/produk/google-maps.png"
-                  class="card-img-top"
-                  alt="Product Image"
-                />
-                <div class="card-body text-light">
-                  <h5 id="card1-title" class="card-title">
-                    MapCraft Solutions
-                  </h5>
-                  <h5 id="card1-price">Rp.100,000</h5>
-                  <button
-                    class="btn btn-outline-warning my-2"
-                    onclick="toggleDescription('card1-description')"
-                  >
-                    Detail
-                  </button>
-                  <p
-                    id="card1-description"
-                    class="card-text"
-                    style="display: none"
-                  >
-                    MapCraft Solutions adalah layanan yang menyediakan jasa
-                    profesional untuk memasukkan lokasi bisnis dan tempat
-                    penting ke dalam Google Maps
-                  </p>
-                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(1)"
-                    >Pesan Via Whatsapp</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-3 col-6 mb-4">
-              <div class="card bg-dark border-2 border-light p-2 rounded">
-                <img
-                  src="assets/produk/graphic-designer.png"
-                  class="card-img-top"
-                  alt="Product Image"
-                />
-                <div class="card-body text-light">
-                  <h5 id="card2-title" class="card-title">Desain Grafis</h5>
-                  <h5 id="card2-price">N/A</h5>
-                  <button
-                    class="btn btn-outline-warning my-2"
-                    onclick="toggleDescription('card2-description')"
-                  >
-                    Detail
-                  </button>
-                  <p
-                    id="card2-description"
-                    class="card-text"
-                    style="display: none"
-                  >
-                    DesignCraft Studio, ahli desain grafis kreatif untuk
-                    menciptakan visual yang menarik dan efektif. Dari logo yang
-                    mencerminkan identitas unik hingga materi pemasaran yang
-                    memikat, kami mewujudkan visi kreatif Anda dengan perpaduan
-                    estetika yang kuat dan strategi pemasaran yang cerdas.
-                  </p>
-                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(2)"
-                    >Pesan Via Whatsapp</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4">
-              <div class="card bg-dark border-2 border-light p-2">
-                <img
-                  src="assets/produk/laptop.png"
-                  class="card-img-top"
-                  alt="Product Image"
-                />
-                <div class="card-body text-light">
-                  <h5 class="card-title">Toko Online</h5>
-                  <h5>Rp.2,000,000</h5>
-                  <button
-                    class="btn btn-outline-warning my-2"
-                    onclick="toggleDescription('card3-description')"
-                  >
-                    Detail
-                  </button>
-                  <p
-                    class="card-text"
-                    id="card3-description"
-                    style="display: none"
-                  >
-                    TokoOnline Hub, solusi lengkap untuk toko online Anda.
-                    Platform intuitif, desain menarik, dan sistem pembayaran
-                    aman. Dapatkan pengalaman berbelanja online yang mulus
-                    dengan fitur analitika penjualan dan integrasi media sosial.
-                    Pilih TokoOnline Hub untuk sukses e-commerce Anda.
-                  </p>
-                  <a href="#" class="btn btn-outline-light" onclick="openWhatsApp(3)"
-                    >Pesan Via Whatsapp</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-6 mb-4">
-              <div class="card bg-dark border-2 border-light p-2">
-                <img
-                  src="assets/produk/invitation.png"
-                  class="card-img-top"
-                  alt="Product Image"
-                />
-                <div class="card-body text-light">
-                  <h5 class="card-title">Undangan Digital</h5>
-                  <h5>Rp.100,000 ^
-                  <div class="package">
-                    <ul id="package1-description" style="display: none">
-                      <li>💐 Harga: 100Rb</li>
-                      <li>📝 12 Nama</li>
-                      <li>🎨 1 Design</li>
-                    </ul>
-                  </div>
-                  <div class="package">
-                    <ul id="package2-description" style="display: none">
-                      <li>💐 Harga: 200Rb</li>
-                      <li>📝 24 Nama</li>
-                      <li>🎨 2 Design</li>
-                    </ul>
-                  </div>
-                  <div class="package">
-                    <ul id="package3-description" style="display: none">
-                      <li>💐 Harga: 300Rb</li>
-                      <li>📝 48 Nama</li>
-                      <li>🎨 3 Design</li>
-                    </ul>
-                  </div>
-                  <button
-                    class="btn btn-outline-warning my-2"
-                    onclick="togglePackages()"
-                  >
-                    Detail
-                  </button>
-                  <a href="#" class="btn btn-outline-light">Pesan Via Whatsapp</a>
-                  </div>
-              </div>
-            </div>
-            <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
-          </div>
-
-          <!-- Tambahkan div col-md-4 dan card sesuai dengan jumlah produk yang ingin ditampilkan -->
-        </div>
-      </div>
+      
 
       <!-- Testimonial Pelanggan  -->
       <!-- <div class="container">
